@@ -1,3 +1,9 @@
+{% load static %}
+
+{% block navbar %}
+
 <a href="/">
-    <img src="/static/images/logo.png" alt="Logo" />
+    <img src="{% static 'logo.png' %}" alt="Logo" />
 </a>
+
+{% endblock %}
