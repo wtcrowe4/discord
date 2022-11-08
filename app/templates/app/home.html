@@ -1,6 +1,19 @@
 {% extends 'main.html' %}
 
 {% block content %}
+
+<div class="home-container">
+    <div>
+        <h3>Topics</h3>
+        <div>
+            <a href="{% url 'home' %}">All</a>
+        </div>
+        {% for topic in topics %}
+            <div>
+                <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }}</a>
+            </div>
+        {% endfor %}
+    </div>
     <h1>Home</h1>
     <p>Home page content goes here.</p>
     <div>
@@ -17,4 +30,6 @@
             {% endfor %}
         </div>
     </div>
+</div>
+
 {% endblock %}

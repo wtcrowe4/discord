@@ -6,4 +6,9 @@
     <img id="nav-logo" src="{% static 'logo.png' %}" alt="Logo" />
 </a>
 
+<form method="GET" action="{% url 'home' %}" class="search-form">
+    <input type="text" name="q" placeholder="Search..." />
+    <button type="submit">Search</button>
+</form>
+
 {% endblock %}
