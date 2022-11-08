@@ -8,9 +8,11 @@
         <div>
             {% for room in rooms %}
                 <div>
-                    <span>@{{room.host.username}}</span>
-                    <h3>{{ room.id }}: <a href="{% url 'room' room.id %}">{{ room.name }}</a></h3>
+                    <h3><a href="{% url 'room' room.id %}">{{ room.name }}</a></h3>
                     <small>{{room.topic.name}}</small>
+                    <small>@{{room.host.username}}</small>
+                    <a href="{% url 'update-room' room.id %}">Edit</a>
+                    <a href="{% url 'delete-room' room.id %}">Delete</a>
                 </div>
             {% endfor %}
         </div>
