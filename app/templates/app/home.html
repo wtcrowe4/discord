@@ -17,6 +17,7 @@
     <h1>Home</h1>
     <p>Home page content goes here.</p>
     <div>
+        <h5>{{room_count}} rooms created.</h5>
         <a href="{% url 'create-room' %}">Create a new room.</a>
         <div>
             {% for room in rooms %}
