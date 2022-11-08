@@ -4,6 +4,7 @@
     <h1>Home</h1>
     <p>Home page content goes here.</p>
     <div>
+        <a href="{% url 'create-room' %}">Create a new room.</a>
         <div>
             {% for room in rooms %}
                 <div>

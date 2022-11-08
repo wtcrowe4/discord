@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <form method="POST" action="" >
+        {% csrf_token %}
+        <!-- <div>
+            <label for="name">Room Name</label>
+            <input type="text" name="name" id="name" value="{{ room.name }}">
+        </div>
+        <div>
+            <label for="topic">Topic</label>
+            <select name="topic" id="topic">
+                {% for topic in topics %}
+                    <option value="{{ topic.id }}" {% if topic.id == room.topic.id %}selected{% endif %}>{{ topic.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="description">Description</label>
+            <textarea name="description" id="description">{{ room.description }}</textarea>
+        </div>
+        <div>
+            <label for="is_private">Private</label>
+            <input type="checkbox" name="is_private" id="is_private" {% if room.is_private %}checked{% endif %}>
+        </div> -->
+        {{ form.as_p }}
+        <div>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}
