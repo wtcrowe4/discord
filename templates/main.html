@@ -9,7 +9,19 @@
 </head>
 <body>
     {% load static %}
+    
     {% include 'navbar.html' %}
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    
+
     
     
     {% block content %}
