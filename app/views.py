@@ -20,6 +20,10 @@ def login_page(req):
     context = {}
     return render(req, 'app/register_login.html', context)
 
+def logout_user(req):
+    logout(req)
+    return redirect('login')
+
 def home(req):
     q = req.GET.get('q') if req.GET.get('q') else ''
     rooms = Room.objects.filter(
