@@ -1,13 +1,39 @@
 from django.shortcuts import render, redirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from .models import Room, Topic
 from .forms import RoomForm
 
+def register_page(req):
+    page = 'register'
+    if req.user.is_authenticated:
+        return redirect('home')
+    if req.method == 'POST':
+        first_name = req.POST.get('first_name')
+        last_name = req.POST.get('last_name')
+        username = req.POST.get('username')
+        email = req.POST.get('email')
+        password = req.POST.get('password')
+        user = User.objects.create_user(
+            first_name=first_name,
+            last_name=last_name,
+            username=username,
+            email=email,
+            password=password)
+        user.save()
+        messages.success(req, 'Account was created for ' + username)
+        return redirect('login')
+    context = {'page': page}
+    return render(req, 'app/register_login.html', context)
 
 def login_page(req):
+    page = 'login'
+    if req.user.is_authenticated:
+        return redirect('home')
     if req.method == 'POST':
         username = req.POST.get('username')
         password = req.POST.get('password')
@@ -17,7 +43,7 @@ def login_page(req):
             return redirect('home')
         else:
             messages.info(req, 'Username or password is incorrect')
-    context = {}
+    context = {'page': page}
     return render(req, 'app/register_login.html', context)
 
 def logout_user(req):
@@ -41,6 +67,7 @@ def room(req, pk):
     context = { 'room': room }
     return render(req, 'app/room.html', context)
 
+@login_required(login_url='login')
 def create_room(req):
     form = RoomForm()
     if req.method == 'POST':
@@ -52,9 +79,13 @@ def create_room(req):
     context = {'form': form}
     return render(req, 'app/room_form.html', context)
 
+@login_required(login_url='login')
 def update_room(req, pk):
     room = Room.objects.get(id=pk)
     form = RoomForm(instance=room)
+    if req.user != room.host:
+        messages.info(req, 'You are not allowed to update this room')
+        return HttpResponseRedirect(req.META.get('HTTP_REFERER'))
     if req.method == 'POST':
         form = RoomForm(req.POST, instance=room)
         if form.is_valid():
@@ -63,8 +94,12 @@ def update_room(req, pk):
     context = {'form': form}
     return render(req, 'app/room_form.html', context)
 
+@login_required(login_url='login')
 def delete_room(req, pk):
     room = Room.objects.get(id=pk)
+    if req.user != room.host:
+        messages.info(req, 'You are not allowed to delete this room')
+        return HttpResponseRedirect(req.META.get('HTTP_REFERER'))
     if req.method == 'POST':
         room.delete()
         return redirect('home')

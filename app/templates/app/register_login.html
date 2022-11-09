@@ -2,6 +2,7 @@
 
 {% block content %}
 
+{% if page == 'login' %}
 <div>
     <h2>Login</h2>
     <form method="POST">
@@ -16,9 +17,44 @@
         </div>
         <button type="submit">Login</button>
     </form>
-    
+    <p>Don't have an account?</p>
+    <a href="{% url 'register' %}">Register</a>
 </div>
 
+{% elif page == 'register' %}
+<div>
+    <h2>Register</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" />
+        </div>
+        <div>
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" />
+        <div>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" />
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" />
+        </div>
+        <div>
+            <label for="password2">Confirm Password</label>
+            <input type="password" name="password2" id="password2" />
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <p>Already have an account?</p>
+    <a href="{% url 'login' %}">Login</a>
+</div>
+{% endif %}
 
 
 {% endblock content %}
