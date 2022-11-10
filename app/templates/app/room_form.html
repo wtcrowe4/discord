@@ -12,7 +12,7 @@
         <div>
             <label for="topic">Topic</label>
             <select name="topic" id="topic">
-                {% for topic in topics %}
+                {% for topic in room.topic %}
                     <option value="{{ topic.id }}" {% if topic.id == room.topic.id %}selected{% endif %}>{{ topic.name }}</option>
                 {% endfor %}
             </select>

@@ -26,7 +26,8 @@ def register_page(req):
             password=password)
         user.save()
         messages.success(req, 'Account was created for ' + username)
-        return redirect('login')
+        login(req, user)
+        return redirect('home')
     context = {'page': page}
     return render(req, 'app/register_login.html', context)
 
