@@ -1,21 +1,69 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <h1>{{  room.name  }}</h1>
-    <p>{{ room.description }}</p>
+
+<style>
+    .room-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+</style>
+
+<div class="room-container">
     <div>
-        <h3>Messages</h3>
-        <div>
-            {% for message in room_messages %}
-                <div class="message">
+        <h1>{{  room.name  }}</h1>
+        <p>{{ room.description }}</p>
+        <div class="comment-wrapper">
+            <h3>Messages</h3>
+            <hr>
+            <div>
+                
+                {% for message in room_messages %}
+                    <div class="message">
+                        <div>
+                            <small>{{ message.user.username }}</small>
+                            <small>{{ message.created|timesince }}</small>
+                        </div>
+                        <div>
+                            {{ message.message }}
+                        </div>
+                    </div>
+                    <hr>
+                {% endfor %}
+            
+            </div>
+            
+            {%  if request.user.is_authenticated %}
+            
+            <div class="comment-form">
+                <form method="POST" action="" >
+                    {% csrf_token %}
+                    
                     <div>
-                        <small>{{ message.user.username }}</small>
-                        <small>{{ message.created|timesince }}</small>
+                        <textarea name="message" id="message" placeholder="Write a message here..."></textarea>
                     </div>
                     <div>
-                        {{ message.message }}
+                        <button type="submit">Send</button>
                     </div>
-                </div>
-            {% endfor %}
+                </form>
+            </div>
+            
+            {% endif %}
+        
         </div>
+    </div>
+    <div class="">
+        <h3>Participants</h3>
+        <hr>
+        
+        {% for participant in participants %}
+            <div>
+                <!-- add participant name here     -->
+                <small>@{{ participant.username }}</small>
+            </div>
+        {% endfor %}
+
+    </div>
+</div>
+
 {% endblock %}

@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import Room, Topic
+from .models import Room, Topic, Message
 from .forms import RoomForm
 
 def register_page(req):
@@ -66,8 +66,18 @@ def home(req):
 
 def room(req, pk):
     room = Room.objects.get(id=pk)
-    room_messages = room.message_set.all().order_by('-created')
-    context = { 'room': room, 'room_messages': room_messages }
+    room_messages = room.message_set.all().order_by('created')
+    participants = room.participants.all()
+    if req.method == 'POST':
+        message = Message.objects.create(
+            user = req.user,
+            room = room,
+            message = req.POST.get('message')
+        )
+        # this is not rendering the new message participant on page
+        room.participants.add(req.user)
+        return redirect('room', pk=room.id)
+    context = { 'room': room, 'room_messages': room_messages, 'participants': participants }
     return render(req, 'app/room.html', context)
 
 @login_required(login_url='login')
