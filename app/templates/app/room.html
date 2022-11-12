@@ -27,6 +27,9 @@
                         <div>
                             {{ message.message }}
                         </div>
+                        {% if request.user == message.user %}
+                        <small><a href="{% url 'delete-message' message.id %}">Delete</a></small>
+                        {% endif %}
                     </div>
                     <hr>
                 {% endfor %}

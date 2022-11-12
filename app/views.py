@@ -74,7 +74,7 @@ def room(req, pk):
             room = room,
             message = req.POST.get('message')
         )
-        # this is not rendering the new message participant on page
+        # this is not rendering the new message participant on page 3hr 22min
         room.participants.add(req.user)
         return redirect('room', pk=room.id)
     context = { 'room': room, 'room_messages': room_messages, 'participants': participants }
@@ -116,5 +116,17 @@ def delete_room(req, pk):
     if req.method == 'POST':
         room.delete()
         return redirect('home')
-    context = {'room': room}
+    context = {'obj': room}
     return render(req, 'app/delete.html', context)
+
+@login_required(login_url='login')
+def delete_message(req, pk):
+    message = Message.objects.get(id=pk)
+    if req.user != message.user:
+        messages.info(req, 'You are not allowed to delete this message')
+        return HttpResponseRedirect(req.META.get('HTTP_REFERER'))
+    if req.method == 'POST':
+        message.delete()
+        return redirect('room', pk=message.room.id)
+    return render(req, 'app/delete.html', {'obj': message})
+    
