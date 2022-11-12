@@ -2,6 +2,13 @@
 
 {% block content %}
 
+<style>
+    .home-container {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+</style>
+
 <div class="home-container">
     <div>
         <h3>Topics</h3>
@@ -14,8 +21,7 @@
             </div>
         {% endfor %}
     </div>
-    <h1>Home</h1>
-    <p>Home page content goes here.</p>
+    
     <div>
         <h5>{{room_count}} rooms created.</h5>
         <a href="{% url 'create-room' %}">Create a new room.</a>
@@ -32,6 +38,17 @@
                 </div>
             {% endfor %}
         </div>
+    </div>
+
+    <div>
+        <h3>Recent Activity</h3>
+        <div>
+            {% for message in recent_messages %}
+                <div>
+                    <small>@{{ message.user.username }} {{ message.created|timesince }}</small>
+                    <p>{{ message.message }}</p>
+                </div>
+            {% endfor %}
     </div>
 </div>
 

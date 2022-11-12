@@ -61,7 +61,9 @@ def home(req):
         Q(host__username__icontains=q))
     topics = Topic.objects.all()
     room_count = rooms.count()
-    context = { 'rooms': rooms, 'topics': topics, 'room_count': room_count }
+    recent_messages = Message.objects.all().order_by('-created')[:5]
+    context = { 'rooms': rooms, 'topics': topics,
+               'room_count': room_count, 'recent_messages': recent_messages }
     return render(req, 'app/home.html', context)
 
 def room(req, pk):
