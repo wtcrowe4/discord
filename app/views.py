@@ -84,6 +84,16 @@ def room(req, pk):
     context = { 'room': room, 'room_messages': room_messages, 'participants': participants }
     return render(req, 'app/room.html', context)
 
+def profile(req, pk):
+    user = User.objects.get(id=pk)
+    rooms = user.room_set.all()
+    topics = Topic.objects.all()
+    recent_messages = user.message_set.all().order_by('-created')[:5]
+    topic_messages = user.message_set.order_by('-created')[:5]
+    context = { 'user': user, 'rooms': rooms, 'topics': topics,
+               'recent_messages': recent_messages, 'topic_messages': topic_messages }
+    return render(req, 'app/profile.html', context)
+
 @login_required(login_url='login')
 def create_room(req):
     form = RoomForm()

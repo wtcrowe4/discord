@@ -3,27 +3,25 @@
 {% block content %}
 
 <style>
-    .home-container {
+    .profile-container {
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
     }
 </style>
 
-<div class="home-container">
+<h1>{{user.username}}</h1>
+
+<div class="profile-container">
     <div>
         {% include 'app/topic_comp.html' %}
     </div>
-    
     <div>
-        <h5>{{room_count}} rooms created.</h5>
-        <a href="{% url 'create-room' %}">Create a new room.</a>
-        <hr>
         {% include 'app/feed_comp.html' %}
     </div>
-
     <div>
         {% include 'app/activity_comp.html' %}
     </div>
 </div>
 
-{% endblock %}
+
+{% endblock content %}
