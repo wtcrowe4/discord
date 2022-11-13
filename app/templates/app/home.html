@@ -11,20 +11,13 @@
 
 <div class="home-container">
     <div>
-        <h3>Topics</h3>
-        <div>
-            <a href="{% url 'home' %}">All</a>
-        </div>
-        {% for topic in topics %}
-            <div>
-                <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }}</a>
-            </div>
-        {% endfor %}
+        {% include 'app/topic_comp.html' %}
     </div>
     
     <div>
         <h5>{{room_count}} rooms created.</h5>
         <a href="{% url 'create-room' %}">Create a new room.</a>
+        <hr>
         <div>
             {% for room in rooms %}
                 <div>
@@ -36,19 +29,13 @@
                     <a href="{% url 'delete-room' room.id %}">Delete</a>
                     {% endif %}
                 </div>
+                <hr>
             {% endfor %}
         </div>
     </div>
 
     <div>
-        <h3>Recent Activity</h3>
-        <div>
-            {% for message in recent_messages %}
-                <div>
-                    <small>@{{ message.user.username }} {{ message.created|timesince }}</small>
-                    <p>{{ message.message }}</p>
-                </div>
-            {% endfor %}
+        {% include 'app/activity_comp.html' %}
     </div>
 </div>
 
