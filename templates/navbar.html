@@ -3,7 +3,7 @@
 {% block navbar %}
 
 <a href="/">
-    <img id="nav-logo" src="{% static 'logo.png' %}" alt="Logo" />
+    <img id="nav-logo" src="{% static 'images/logo.jpg' %}" alt="Logo" />
 </a>
 
 <form method="GET" action="{% url 'home' %}" class="search-form">
@@ -11,7 +11,7 @@
     <button type="submit">Search</button>
 </form>
 
-<a href="{% url 'profile' request.user.id %}">Profile</a>
+<!-- Add link for profile -->
 
 {% if request.user.is_authenticated %}
     <a href="{% url 'logout' %}">Logout</a>
