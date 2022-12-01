@@ -10,12 +10,12 @@
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    color:#fb8500ff;
+    color:whitesmoke;
 }
 
 a {
     text-decoration: none;
-    color: #ffb703ff;
+    color: lightblue;
 }
 
 #nav-logo {
@@ -24,7 +24,7 @@ a {
 }
 
 .navbar-container {
-    background-color: #219ebcff;
+    background-color: rgb(1, 27, 40);
     height: 70px;
     width: 100%;
     display: flex;

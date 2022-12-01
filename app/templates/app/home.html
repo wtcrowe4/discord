@@ -4,18 +4,19 @@
 
 
 <div class="home-container">
-    <div>
+    <div class="topics">
         {% include 'app/topic_comp.html' %}
     </div>
     
-    <div>
+    <div class="main">
         <h5>{{room_count}} rooms created.</h5>
         <a href="{% url 'create-room' %}">Create a new room.</a>
         <hr>
         {% include 'app/feed_comp.html' %}
+        
     </div>
 
-    <div>
+    <div class="activity">
         {% include 'app/activity_comp.html' %}
     </div>
 </div>

@@ -1,9 +1,11 @@
-<div>
+
+<div class="main-rooms-container">
     {% for room in rooms %}
-        <div>
+        <div class="main-rooms">
             <h3><a href="{% url 'room' room.id %}">{{ room.name }}</a></h3>
             <small>{{room.topic.name}}</small>
-            <small><a href="{% url 'profile' room.host.id %}">@{{room.host.username}}</a></small>
+            <small>@{{room.host.username}}</small>
+            
             {% if request.user == room.host %}
             <a href="{% url 'update-room' room.id %}">Edit</a>
             <a href="{% url 'delete-room' room.id %}">Delete</a>

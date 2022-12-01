@@ -1,0 +1,39 @@
+#nav-logo {
+    height: 40px;
+    width: 50px;
+}
+
+.navbar-container {
+    background-color: rgb(1, 27, 40);
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px 20px;
+
+    
+    button{
+        background-color: lightblue;
+        border: none;
+        color: #023047ff;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        &:hover {
+            color: rgb(1, 27, 40);
+        }
+    }
+
+    a {
+        color: whitesmoke;
+        padding-right: 40px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        &:hover {
+            color: lightblue;
+        }
+    }
+   
+}

@@ -1,0 +1,107 @@
+@import 'navbar.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color:whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    color: lightblue;
+}
+
+
+
+.home-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    .topics {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-color: rgb(1, 27, 40);
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        transition: all 0.3s ease;
+        &:hover {
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        background-color: rgb(1, 27, 40);
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        transition: all 0.3s ease;
+        &:hover {
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+
+        .main-rooms-container {
+            width: 100%;
+            padding: 20px;
+        }
+    }
+
+    .activity {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        background-color: rgb(1, 27, 40);
+        border-radius: 10px;
+        margin: 20px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        transition: all 0.3s ease;
+        &:hover {
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+
+
+
+.room-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    
+}
+
+ body {
+    background-color: #023047ff;
+ }
