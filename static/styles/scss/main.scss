@@ -1,4 +1,5 @@
 @import 'navbar.scss';
+@import 'home.scss';
 
 * {
     margin: 0;
@@ -14,84 +15,7 @@ a {
 
 
 
-.home-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
 
-    .topics {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        background-color: rgb(1, 27, 40);
-        border-radius: 10px;
-        margin: 20px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-        transition: all 0.3s ease;
-        &:hover {
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.1rem;
-        }
-    }
-
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 20px;
-        background-color: rgb(1, 27, 40);
-        border-radius: 10px;
-        margin: 20px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-        transition: all 0.3s ease;
-        &:hover {
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.1rem;
-        }
-
-        .main-rooms-container {
-            width: 100%;
-            padding: 20px;
-        }
-    }
-
-    .activity {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 20px;
-        background-color: rgb(1, 27, 40);
-        border-radius: 10px;
-        margin: 20px;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-        transition: all 0.3s ease;
-        &:hover {
-            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
-        }
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        p {
-            font-size: 1.1rem;
-        }
-    }
-}
 
 
 
@@ -104,4 +28,39 @@ a {
 
  body {
     background-color: #023047ff;
+ }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: rgb(1, 27, 40);
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0px;
+    padding: 0px 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    
+    .social-links {
+        font-size: 1.4rem;
+        padding-right: 20px;
+
+        a{
+            padding-right: 10px;
+            i:hover {
+                color: lightblue;
+                transition: all 0.3s ease;
+                scale: 1.3;
+            }
+
+        }
+
+    }
+    p {
+        padding-right: 50px;
+        color: whitesmoke;
+        font-size: 1.1rem;
+    }
  }

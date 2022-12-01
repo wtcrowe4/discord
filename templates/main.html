@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Clone</title>
     <link rel="stylesheet" type="text/css" media="screen" href="{% static 'styles/css/main.css' %}" />
+    <script src="https://kit.fontawesome.com/d1c0a86946.js" crossorigin="anonymous"></script>
 </head>
 <body>
     {% load static %}
@@ -21,12 +22,10 @@
         {% endfor %}
     {% endif %}
 
-    
-
-    
-    
     {% block content %}
     {% endblock %}
 
+    {% include 'footer.html' %}
+            
 </body>
 </html>
