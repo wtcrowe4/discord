@@ -1,21 +1,24 @@
-<h3>Topics</h3>
-        <div>
-            <a href="{% url 'home' %}">All</a>
-        </div>
-        {% for topic in topics %}
-            <div>
-                <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }}</a>
-            </div>
-        {% endfor %}
-        <h4>Topic Activity</h4>
-            {% for topic_message in topic_messages %}
-               
-                    <div>
-                        <small>{{ topic_message.user.username }}</small>
-                        <small>{{ topic_message.created|timesince }}</small>
-                    </div>
-                    <div>
-                        {{ topic_message.message }}
-                    </div>
-                <hr>
-            {% endfor %}
+{% load static %}
+
+{% block topics %}
+<h3 id="topic-header">Topics</h3>
+<div class="topic-links">
+    <a href="{% url 'home' %}">All   <span>{{topics.count}}</span></a>
+</div>
+{% for topic in topics %}
+    <div>
+        <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }} <span>{{topic.room_set.all.count}}</span></a>
+    </div>
+{% endfor %}
+<h4 id="topic-activity">Topic Activity</h4>
+{% for topic_message in topic_messages %}
+    <div>
+        <small>@{{ topic_message.user.username }}</small>
+        <small>{{ topic_message.created|timesince }}</small>
+    </div>
+    <div>
+        {{ topic_message.message }}
+    </div>
+{% endfor %}
+
+{% endblock %}

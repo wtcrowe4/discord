@@ -11,18 +11,23 @@
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
 }
 .home-container .topics:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
-.home-container .topics h3 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.home-container .topics #topic-header {
+  font-size: 3rem;
+  padding-bottom: 10px;
 }
 .home-container .topics p {
   font-size: 1.1rem;
+}
+.home-container .topics #topic-activity {
+  font-size: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .home-container .main {
   display: flex;
@@ -33,11 +38,11 @@
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
 }
 .home-container .main:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
 .home-container .main h2 {
   font-size: 1.5rem;
@@ -59,11 +64,11 @@
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
 }
 .home-container .activity:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
 .home-container .activity h2 {
   font-size: 1.5rem;
