@@ -15,6 +15,10 @@
   padding: 0px 20px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
+.navbar-container form #search-bar {
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px;
+}
 .navbar-container button {
   padding: 5px;
   background-color: white;
@@ -52,17 +56,34 @@
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
 }
 .home-container .topics:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
 .home-container .topics #topic-header {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-bottom: 10px;
+  text-decoration: underline;
 }
 .home-container .topics p {
+  font-size: 1.1rem;
+}
+.home-container .topics #topic-activity-header {
+  font-size: 1.5rem;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+.home-container .topics #topic-activity-container {
+  border-radius: 5px;
+  border: 2px 2px white;
+}
+.home-container .topics #topic-activity-info {
+  text-decoration: underline;
+}
+.home-container .topics #topic-activity-message {
   font-size: 1.1rem;
 }
 .home-container .main {
@@ -74,11 +95,11 @@
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
 }
 .home-container .main:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
 .home-container .main h2 {
   font-size: 1.5rem;
@@ -100,11 +121,11 @@
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
   transition: all 0.3s ease;
 }
 .home-container .activity:hover {
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
 .home-container .activity h2 {
   font-size: 1.5rem;
@@ -112,6 +133,138 @@
 }
 .home-container .activity p {
   font-size: 1.1rem;
+}
+
+#login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(1, 27, 40);
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
+  transition: all 0.3s ease;
+}
+#login-container:hover {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
+}
+#login-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+  padding-bottom: 50px;
+}
+#login-container form {
+  text-align: center;
+}
+#login-container form label {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+#login-container form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #023047;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: whitesmoke;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+#login-container form button {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #023047;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: whitesmoke;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#login-container form button:hover {
+  background-color: #023047;
+}
+#login-container p {
+  font-size: 1.4rem;
+  padding-top: 20px;
+}
+#login-container a {
+  padding-top: 5px;
+  color: lightblue;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+#login-container a:hover {
+  color: white;
+}
+
+#register-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: rgb(1, 27, 40);
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
+  transition: all 0.3s ease;
+}
+#register-container:hover {
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
+}
+#register-container h2 {
+  text-align: center;
+  font-size: 3rem;
+  text-decoration: underline;
+  padding-bottom: 50px;
+}
+#register-container form {
+  text-align: center;
+}
+#register-container form label {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+}
+#register-container form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #023047;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: whitesmoke;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+#register-container form button {
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #023047;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: whitesmoke;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#register-container form button:hover {
+  background-color: #023047;
+}
+#register-container p {
+  font-size: 1.4rem;
+  padding-top: 20px;
+}
+#register-container a {
+  padding-top: 5px;
+  color: lightblue;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+#register-container a:hover {
+  color: white;
 }
 
 * {

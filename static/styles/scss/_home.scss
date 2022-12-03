@@ -23,16 +23,32 @@
     .topics {
         @include section_container;
         #topic-header {
-            font-size: 3rem;
+            font-size: 2rem;
             padding-bottom: 10px;
+            text-decoration: underline;
         }
         p {
             font-size: 1.1rem;
         }
-        #topic-activity {
-            font-size: 2rem;
-            padding-top: 10px;
+        #topic-activity-header {
+            font-size: 1.5rem;
+            padding-top: 20px;
             padding-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        #topic-activity-container {
+            border-radius: 5px;
+            border: 2px 2px white    
+        
+        }
+
+        #topic-activity-info {
+            text-decoration: underline;
+        }
+
+        #topic-activity-message {
+            font-size: 1.1rem;
         }
     }
 

@@ -10,14 +10,17 @@
         <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }} <span>{{topic.room_set.all.count}}</span></a>
     </div>
 {% endfor %}
-<h4 id="topic-activity">Topic Activity</h4>
+<h4 id="topic-activity-header">Topic Activity</h4>
 {% for topic_message in topic_messages %}
-    <div>
-        <small>@{{ topic_message.user.username }}</small>
-        <small>{{ topic_message.created|timesince }}</small>
-    </div>
-    <div>
-        {{ topic_message.message }}
+    <div id="topic-activity-container">
+        <div id="topic-activity-info">
+            <small>@{{ topic_message.user.username }}</small>
+            <small>{{ topic_message.created|timesince }}</small>
+            <hr>
+        </div>
+        <div id="topic-activity-message">
+            {{ topic_message.message }}
+        </div>
     </div>
 {% endfor %}
 
