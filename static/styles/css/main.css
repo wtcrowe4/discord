@@ -2,6 +2,8 @@
   padding-top: 5px;
   height: 50px;
   width: 60px;
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .navbar-container {
@@ -13,11 +15,12 @@
   justify-content: space-between;
   margin: 0px;
   padding: 0px 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px lightblue;
 }
 .navbar-container form #search-bar {
   background-color: rgba(0, 0, 0, 0.75);
   padding: 10px;
+  height: 0.6rem;
 }
 .navbar-container button {
   padding: 5px;
@@ -25,7 +28,6 @@
   border: #023047;
   border-radius: 5px;
   color: #023047;
-  cursor: pointer;
   font-size: 1rem;
   transition: all 0.3s ease;
 }
@@ -52,15 +54,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 10px;
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
-  transition: all 0.3s ease;
-}
-.home-container .topics:hover {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
 }
 .home-container .topics #topic-header {
   align-items: flex-start;
@@ -94,15 +93,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 10px;
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
-  transition: all 0.3s ease;
-}
-.home-container .main:hover {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
 }
 .home-container .main h5 {
   align-items: flex-start;
@@ -119,20 +115,22 @@
 .home-container .main .main-rooms-container .main-rooms {
   padding: 20px;
 }
+.home-container .main .main-rooms-container .main-rooms .main-delete {
+  float: right;
+  font-size: 0.8rem;
+  padding-left: 10px;
+}
 .home-container .activity {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 20px;
+  padding: 10px;
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   margin: 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.85);
-  transition: all 0.3s ease;
-}
-.home-container .activity:hover {
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
 }
 .home-container .activity h3 {
   font-size: 1.5rem;
@@ -319,7 +317,7 @@ footer {
   justify-content: flex-end;
   margin: 0px;
   padding: 0px 20px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px lightblue;
 }
 footer .social-links {
   font-size: 1.4rem;

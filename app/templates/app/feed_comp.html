@@ -8,8 +8,8 @@
             <small>@{{room.host.username}}</small>
             
             {% if request.user == room.host %}
-            <a href="{% url 'update-room' room.id %}">Edit</a>
-            <a href="{% url 'delete-room' room.id %}">Delete</a>
+            <a class="main-delete" href="{% url 'update-room' room.id %}">Edit</a>
+            <a class="main-delete" href="{% url 'delete-room' room.id %}">Delete</a>
             {% endif %}
         </div>
         <hr>
