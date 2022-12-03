@@ -44,14 +44,15 @@
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #023047ff;
-            background-color: rgba(0,0,0,0.75);
-            color: whitesmoke;
+            background-color: white;
+            color: #023047ff;
             font-size: 1.1rem;
             margin-bottom: 20px;
             cursor: pointer;
             transition: all 0.3s ease;
             &:hover {
                 background-color: #023047ff;
+                color: white;
             }
         }
     }

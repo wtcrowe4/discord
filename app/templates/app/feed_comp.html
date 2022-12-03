@@ -1,5 +1,6 @@
 
 <div class="main-rooms-container">
+    <hr>
     {% for room in rooms %}
         <div class="main-rooms">
             <h3><a href="{% url 'room' room.id %}">{{ room.name }}</a></h3>

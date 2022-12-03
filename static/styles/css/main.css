@@ -51,7 +51,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px;
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
@@ -63,6 +63,7 @@
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
 .home-container .topics #topic-header {
+  align-items: flex-start;
   font-size: 2rem;
   padding-bottom: 10px;
   text-decoration: underline;
@@ -78,10 +79,12 @@
 }
 .home-container .topics #topic-activity-container {
   border-radius: 5px;
-  border: 2px 2px white;
+  border: white;
+  text-align: center;
 }
 .home-container .topics #topic-activity-info {
   text-decoration: underline;
+  padding-top: 6px;
 }
 .home-container .topics #topic-activity-message {
   font-size: 1.1rem;
@@ -90,7 +93,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px;
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
@@ -101,22 +104,26 @@
 .home-container .main:hover {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
-.home-container .main h2 {
-  font-size: 1.5rem;
+.home-container .main h5 {
+  align-items: flex-start;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
-.home-container .main p {
-  font-size: 1.1rem;
+.home-container .main a {
+  font-size: 1.4rem;
 }
 .home-container .main .main-rooms-container {
   width: 100%;
+  padding: 20px;
+}
+.home-container .main .main-rooms-container .main-rooms {
   padding: 20px;
 }
 .home-container .activity {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 20px;
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
@@ -127,12 +134,23 @@
 .home-container .activity:hover {
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.85);
 }
-.home-container .activity h2 {
+.home-container .activity h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-decoration: underline;
 }
 .home-container .activity p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+.home-container .activity small {
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.home-container .activity #recent-delete {
+  font-size: 0.5rem;
+  text-align: right;
 }
 
 #login-container {
@@ -177,8 +195,8 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #023047;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: whitesmoke;
+  background-color: white;
+  color: #023047;
   font-size: 1.1rem;
   margin-bottom: 20px;
   cursor: pointer;
@@ -186,6 +204,7 @@
 }
 #login-container form button:hover {
   background-color: #023047;
+  color: white;
 }
 #login-container p {
   font-size: 1.4rem;
@@ -243,8 +262,8 @@
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #023047;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: whitesmoke;
+  background-color: white;
+  color: #023047;
   font-size: 1.1rem;
   margin-bottom: 20px;
   cursor: pointer;
@@ -252,6 +271,7 @@
 }
 #register-container form button:hover {
   background-color: #023047;
+  color: white;
 }
 #register-container p {
   font-size: 1.4rem;
