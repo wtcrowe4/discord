@@ -88,10 +88,11 @@ def room(req, pk):
 def profile(req, pk):
     user = User.objects.get(id=pk)
     rooms = user.room_set.all()
+    room_count = rooms.count()
     topics = Topic.objects.all()
     recent_messages = user.message_set.all().order_by('-created')[:5]
     topic_messages = user.message_set.order_by('-created')[:5]
-    context = { 'user': user, 'rooms': rooms, 'topics': topics,
+    context = { 'user': user, 'rooms': rooms, 'room_count': room_count, 'topics': topics,
                'recent_messages': recent_messages, 'topic_messages': topic_messages }
     return render(req, 'app/profile.html', context)
 
