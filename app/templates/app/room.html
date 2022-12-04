@@ -1,4 +1,5 @@
 {% extends 'main.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -6,11 +7,12 @@
 
 <div class="room-container">
     <div>
-        <h1>{{  room.name  }}</h1>
-        <p>{{ room.description }}</p>
+        <div id="room-header">
+            <h1 id="room-name">{{  room.name  }}</h1>
+            <p>{{ room.description }}</p>
+        </div>
         <div class="comment-wrapper">
             <h3>Messages</h3>
-            <hr>
             <div>
                 
                 {% for message in room_messages %}
@@ -18,6 +20,7 @@
                         <div>
                             <small>{{ message.user.username }}</small>
                             <small>{{ message.created|timesince }}</small>
+                            <hr>
                         </div>
                         <div>
                             {{ message.message }}
@@ -26,7 +29,7 @@
                         <small><a href="{% url 'delete-message' message.id %}">Delete</a></small>
                         {% endif %}
                     </div>
-                    <hr>
+                    
                 {% endfor %}
             
             </div>
@@ -38,7 +41,7 @@
                     {% csrf_token %}
                     
                     <div>
-                        <textarea name="message" id="message" placeholder="Write a message here..."></textarea>
+                        <textarea name="message" id="message" placeholder="Write your message here..."></textarea>
                     </div>
                     <div>
                         <button type="submit">Send</button>
@@ -50,14 +53,14 @@
         
         </div>
     </div>
-    <div>
+    <div id="room-participants">
         <h3>Participants</h3>
         <hr>
         
         {% for participant in participants %}
             <div>
                 <!-- add participant name here     -->
-                <small>@{{ participant.username }}</small>
+                <a href="{% url 'profile' user.id %}"><small>@{{ participant.username }}</small></a>
             </div>
         {% endfor %}
 

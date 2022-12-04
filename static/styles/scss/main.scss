@@ -1,7 +1,9 @@
-@import 'navbar.scss';
-@import 'home.scss';
-@import 'login.scss';
-@import 'register.scss';
+@import 'navbar';
+@import 'home';
+@import 'login';
+@import 'register';
+@import 'room';
+@import 'profile';
 
 * {
     margin: 0;
@@ -19,7 +21,7 @@ a {
 
 .room-container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     
 }
 
