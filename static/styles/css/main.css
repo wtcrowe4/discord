@@ -45,6 +45,10 @@
 .navbar-container a:hover {
   color: lightblue;
 }
+.navbar-container #user-link {
+  padding: 0;
+  margin: 0;
+}
 
 .home-container {
   display: grid;
