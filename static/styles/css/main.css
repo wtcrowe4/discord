@@ -374,6 +374,119 @@ mixin section_container {
   text-decoration: underline;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 20px;
+  text-decoration: underline;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+.profile-container .topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: rgb(1, 27, 40);
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
+}
+.profile-container .topics #topic-header {
+  align-items: flex-start;
+  font-size: 2rem;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+.profile-container .topics p {
+  font-size: 1.1rem;
+}
+.profile-container .topics #topic-activity-header {
+  font-size: 1.5rem;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+.profile-container .topics #topic-activity-container {
+  border-radius: 5px;
+  border: white;
+  text-align: center;
+}
+.profile-container .topics #topic-activity-info {
+  text-decoration: underline;
+  padding-top: 6px;
+}
+.profile-container .topics #topic-activity-message {
+  font-size: 1.1rem;
+}
+.profile-container .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: rgb(1, 27, 40);
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
+}
+.profile-container .main h5 {
+  align-items: flex-start;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+.profile-container .main a {
+  font-size: 1.4rem;
+}
+.profile-container .main .main-rooms-container {
+  width: 100%;
+  padding: 20px;
+}
+.profile-container .main .main-rooms-container .main-rooms {
+  padding: 20px;
+}
+.profile-container .main .main-rooms-container .main-rooms .main-delete {
+  float: right;
+  font-size: 0.8rem;
+  padding-left: 10px;
+}
+.profile-container .activity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: rgb(1, 27, 40);
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
+}
+.profile-container .activity h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+.profile-container .activity p {
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+}
+.profile-container .activity small {
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+.profile-container .activity #recent-delete {
+  font-size: 0.5rem;
+  text-align: right;
+}
+
 * {
   margin: 0;
   padding: 0;

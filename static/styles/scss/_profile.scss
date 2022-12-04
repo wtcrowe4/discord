@@ -1,0 +1,108 @@
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    
+    
+
+    .topics {
+        @include section_container;
+        #topic-header {
+            align-items: flex-start;
+            font-size: 2rem;
+            padding-bottom: 10px;
+            text-decoration: underline;
+        }
+        p {
+            font-size: 1.1rem;
+        }
+        #topic-activity-header {
+            font-size: 1.5rem;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        #topic-activity-container {
+            border-radius: 5px;
+            border:  white;
+            text-align: center;    
+        
+        }
+
+        #topic-activity-info {
+            text-decoration: underline;
+            padding-top: 6px;
+        }
+
+        #topic-activity-message {
+            font-size: 1.1rem;
+        }
+    }
+
+    .main {
+        @include section_container;
+        h5 {
+            align-items: flex-start;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        a {
+            font-size: 1.4rem;
+        }
+
+        .main-rooms-container {
+            width: 100%;
+            padding: 20px;
+        
+            .main-rooms {
+                padding: 20px;
+
+                .main-delete {
+                    float: right;
+                    font-size: .8rem;
+                    padding-left: 10px;
+                }
+            }
+
+            
+        }
+    }
+
+    .activity {
+        @include section_container;
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            text-decoration: underline;
+        }
+        p {
+            font-size: 1.2rem;
+            padding-bottom: 10px;
+        }
+
+        small {
+            font-size: .9rem;
+            text-decoration: underline;
+        }
+
+        #recent-delete {
+            font-size: .5rem;
+            text-align: right;
+        }
+        
+    }
+
+}
+
+
+
+
+

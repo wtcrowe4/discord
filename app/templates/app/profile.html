@@ -1,24 +1,18 @@
 {% extends 'main.html' %}
-
+{% load static %}
 {% block content %}
 
-<style>
-    .profile-container {
-        display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
-    }
-</style>
 
 <h1>{{user.username}}</h1>
 
 <div class="profile-container">
-    <div>
+    <div class="topics">
         {% include 'app/topic_comp.html' %}
     </div>
-    <div>
+    <div class="main">
         {% include 'app/feed_comp.html' %}
     </div>
-    <div>
+    <div class="activity">
         {% include 'app/activity_comp.html' %}
     </div>
 </div>
