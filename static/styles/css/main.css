@@ -286,19 +286,6 @@
   color: white;
 }
 
-mixin section_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 10px;
-  background-color: rgb(1, 27, 40);
-  border-radius: 10px;
-  margin: 20px;
-  margin-top: 40px;
-  box-shadow: 0px 0px 10px 0px lightblue;
-}
-
 .comment-wrapper {
   display: flex;
   flex-direction: column;
@@ -373,6 +360,46 @@ mixin section_container {
   padding-bottom: 10px;
   padding-left: 10px;
   text-decoration: underline;
+}
+
+.new-room {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: rgb(1, 27, 40);
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
+}
+.new-room #new-room-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.new-room #new-room-form input {
+  margin: 10px;
+  color: rgb(1, 27, 40);
+}
+.new-room #new-room-form select {
+  margin: 10px;
+  color: rgb(1, 27, 40);
+}
+.new-room #new-room-form textarea {
+  margin: 10px;
+  color: rgb(1, 27, 40);
+}
+.new-room #new-room-form option {
+  color: rgb(1, 27, 40);
+  margin: 10px;
+}
+.new-room #new-room-form button {
+  margin: 10px;
+  color: rgb(1, 27, 40);
 }
 
 h1 {
