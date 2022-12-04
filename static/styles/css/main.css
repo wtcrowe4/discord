@@ -38,6 +38,7 @@
 .navbar-container a {
   color: whitesmoke;
   padding-right: 40px;
+  padding-left: 10px;
   font-size: 1.1rem;
   transition: all 0.3s ease;
 }
