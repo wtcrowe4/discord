@@ -1,6 +1,7 @@
 .comment-wrapper {
     @include section_container;
     align-items: center;
+    margin-bottom: 80px;
     
     h3 {
         align-self: center;
@@ -65,6 +66,7 @@
 
 #room-participants{
     @include section_container;
+    margin-bottom: 80px;
     a:hover {
         text-decoration: underline;
         color: lightblue;

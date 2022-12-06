@@ -64,15 +64,12 @@
     </div>
     <div id="room-participants">
         <h3>Participants</h3>
-        <hr>
-        
         {% for participant in participants %}
             <div>
                 <!-- add participant name here     -->
                 <a href="{% url 'profile' user.id %}"><small>@{{ participant.username }}</small></a>
             </div>
         {% endfor %}
-
     </div>
 </div>
 
