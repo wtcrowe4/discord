@@ -10,13 +10,16 @@
         <button type="submit">Search</button>
     </form>
 
-    <!-- Add link for profile -->
-
     {% if request.user.is_authenticated %}
+    
         <p>
-            Hey, <a id="user-link" href="{% url 'profile' user.id %}">{{ user.username }}</a>
+            Hey, <a id="user-link" href="{% url 'profile' user.id %}">{{ user.username }}
+                <img id="profile-image" src="{% static 'images/gen-user.webp' %}" alt="User Image" />
+            </a>
+            
             <a href="{% url 'logout' %}">Logout</a>
         </p>
+        
     {% else %}
         <a href="{% url 'login' %}">Login</a>
     {% endif %}

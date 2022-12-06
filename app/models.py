@@ -34,3 +34,11 @@ class Message(models.Model):
     def __str__(self):
         return self.message[0:50]
     
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    image = models.ImageField(default='images/gen-user.webp')
+    
+    def __str__(self):
+        return self.user.username
+    

@@ -8,6 +8,14 @@
 
 }
 
+#profile-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border: 1px solid white;
+    
+}
+
 .navbar-container {
     background-color: rgb(1, 27, 40);
     height: 70px;
@@ -50,10 +58,15 @@
             color: lightblue;
         }
     }
+    
+    p {
+        
 
-    #user-link {
-        padding:0;
-        margin: 0;
+        #user-link {
+            padding:0;
+            margin: 0;
+        }
+
+       
     }
-   
 }

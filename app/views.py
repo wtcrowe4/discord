@@ -55,6 +55,7 @@ def logout_user(req):
 def home(req):
     q = req.GET.get('q') if req.GET.get('q') else ''
     users = User.objects.filter(Q(username__icontains=q) | Q(first_name__icontains=q) | Q(last_name__icontains=q))
+    user_image = User.objects.get(id=req.user.id).userprofile.image
     rooms = Room.objects.filter(
         Q(topic__name__icontains=q) |
         Q(name__icontains=q) |
@@ -64,7 +65,7 @@ def home(req):
     room_count = rooms.count()
     recent_messages = Message.objects.all().order_by('-created')[:5]
     topic_messages = Message.objects.filter(Q(room__topic__name__icontains=q)).order_by('-created')[:5]
-    context = { 'users': users, 'rooms': rooms, 'topics': topics,
+    context = { 'users': users, 'user_image': user_image, 'rooms': rooms, 'topics': topics,
                'room_count': room_count, 'recent_messages': recent_messages,
                'topic_messages': topic_messages }
     return render(req, 'app/home.html', context)

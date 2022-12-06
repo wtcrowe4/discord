@@ -6,6 +6,13 @@
   border-radius: 10px;
 }
 
+#profile-image {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
 .navbar-container {
   background-color: rgb(1, 27, 40);
   height: 70px;
@@ -45,7 +52,7 @@
 .navbar-container a:hover {
   color: lightblue;
 }
-.navbar-container #user-link {
+.navbar-container p #user-link {
   padding: 0;
   margin: 0;
 }
