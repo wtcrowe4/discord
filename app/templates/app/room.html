@@ -16,9 +16,10 @@
             <div>
                 
                 {% for message in room_messages %}
+
                     <div class="message">
                         <div>
-                            <small>{{ message.user.username }}</small>
+                            <small>@{{ message.user.username }}</small>
                             <small>{{ message.created|timesince }}</small>
                             <hr>
                         </div>
@@ -26,6 +27,17 @@
                             {{ message.message }}
                         </div>
                         {% if request.user == message.user %}
+                        <!-- <style>
+                            .comment-wrapper {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                            }
+                            .message {
+                                background-color: navy;
+                                text-align: right;
+                            }
+                        </style> -->
                         <small><a href="{% url 'delete-message' message.id %}">Delete</a></small>
                         {% endif %}
                     </div>

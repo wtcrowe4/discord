@@ -5,32 +5,36 @@
         align-self: center;
         text-decoration: underline;
         font-size: 1.5rem;
+        margin-bottom: 10px;
     }
 
     .message {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         padding-top: 20px;
         padding: 10px;
         margin: 10px;
         background-color: rgb(1, 27, 40);
         border-radius: 10px;
         box-shadow: 0px 0px 10px 0px lightblue; 
-
     }
 
     .comment-form {
-        align-self: flex-end;
+        align-self: center;
         padding-top: 40px;
         padding:20px;
+        width: 80%;
         
         textarea {
+            width: 100%;
             color:rgb(1, 27, 40);
         }
 
         button{
             color:rgb(1, 27, 40);
-            align-self: flex-end;
+            align-content: flex-end;
+            justify-content: flex-end;
             padding: 5px;
             margin-top: 5px;
         }
@@ -39,6 +43,7 @@
 
 #room-header{
     @include section_container;
+    padding-top: 0px;
 }
 
 #room-participants{
