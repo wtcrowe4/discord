@@ -13,41 +13,38 @@
         </div>
         <div class="comment-wrapper">
             <h3>Messages</h3>
-            <div>
+            <div class="comments">
                 
                 {% for message in room_messages %}
-
+                    {% if request.user != message.user %}
                     <div class="message">
                         <div>
-                            <small>@{{ message.user.username }}</small>
+                            <small><a href="{% url 'profile' message.user.id %}">@{{ message.user.username }}</a></small>
                             <small>{{ message.created|timesince }}</small>
                             <hr>
                         </div>
                         <div>
                             {{ message.message }}
                         </div>
-                        {% if request.user == message.user %}
-                        <!-- <style>
-                            .comment-wrapper {
-                                display: flex;
-                                flex-direction: column;
-                                align-items: flex-end;
-                            }
-                            .message {
-                                background-color: navy;
-                                text-align: right;
-                            }
-                        </style> -->
-                        <small><a href="{% url 'delete-message' message.id %}">Delete</a></small>
-                        {% endif %}
                     </div>
-                    
+                    {% endif %} 
+                    {% if request.user == message.user %}
+                    <div class="user-message">
+                        <div>
+                            <small><a href="{% url 'profile' message.user.id %}">@{{ message.user.username }}</a></small>
+                            <small>{{ message.created|timesince }}</small>
+                            <hr>
+                        </div>
+                        <div>
+                            {{ message.message }}
+                        </div>
+                        <small><a href="{% url 'delete-message' message.id %}">Delete</a></small>
+                    </div>
+                    {% endif %}
                 {% endfor %}
-            
             </div>
             
             {%  if request.user.is_authenticated %}
-            
             <div class="comment-form">
                 <form method="POST" action="" >
                     {% csrf_token %}

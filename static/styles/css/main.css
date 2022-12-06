@@ -318,7 +318,7 @@
   margin: 20px;
   margin-top: 40px;
   box-shadow: 0px 0px 10px 0px lightblue;
-  align-items: flex-start;
+  align-items: center;
 }
 .comment-wrapper h3 {
   align-self: center;
@@ -326,16 +326,30 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
+.comment-wrapper .comments {
+  width: 100%;
+}
 .comment-wrapper .message {
+  width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding-top: 20px;
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   background-color: rgb(1, 27, 40);
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px lightblue;
+}
+.comment-wrapper .user-message {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(1, 38, 56);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px lightblue;
+  text-align: right;
 }
 .comment-wrapper .comment-form {
   align-self: center;
@@ -380,6 +394,10 @@
   margin: 20px;
   margin-top: 40px;
   box-shadow: 0px 0px 10px 0px lightblue;
+}
+#room-participants a:hover {
+  text-decoration: underline;
+  color: lightblue;
 }
 
 #room-name {
