@@ -4,7 +4,10 @@
     width: 60px;
     border: 1px solid white;
     border-radius: 10px;
-    
+    &:hover {
+        border: 1px solid lightblue;
+        box-shadow: 2px 2px 5px 0px lightblue;
+    }
 
 }
 
@@ -12,7 +15,12 @@
     height: 40px;
     width: 40px;
     border-radius: 20px;
-    border: 1px solid white;
+    border: 2px solid white;
+    &:hover {
+        border: 2px solid lightblue;
+        box-shadow: 2px 2px 5px 0px lightblue;
+    }
+    
     
 }
 

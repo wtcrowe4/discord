@@ -5,12 +5,20 @@
   border: 1px solid white;
   border-radius: 10px;
 }
+#nav-logo:hover {
+  border: 1px solid lightblue;
+  box-shadow: 2px 2px 5px 0px lightblue;
+}
 
 #profile-image {
   height: 40px;
   width: 40px;
   border-radius: 20px;
-  border: 1px solid white;
+  border: 2px solid white;
+}
+#profile-image:hover {
+  border: 2px solid lightblue;
+  box-shadow: 2px 2px 5px 0px lightblue;
 }
 
 .navbar-container {
@@ -233,6 +241,58 @@
   transition: all 0.3s ease;
 }
 #login-container a:hover {
+  color: white;
+}
+
+#delete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: rgb(1, 27, 40);
+  border-radius: 10px;
+  margin: 20px;
+  margin-top: 40px;
+  box-shadow: 0px 0px 10px 0px lightblue;
+  margin-bottom: 80px;
+}
+#delete-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+#delete-container h3 {
+  padding: 10px;
+  font-size: 2rem;
+}
+#delete-container p {
+  padding: 10px;
+  font-size: 1.3rem;
+}
+#delete-container button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #023047;
+  background-color: white;
+  color: #023047;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#delete-container button:hover {
+  box-shadow: 0px 0px 10px 0px lightblue;
+}
+#delete-container a {
+  padding-bottom: 10px;
+  color: lightblue;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+#delete-container a:hover {
   color: white;
 }
 
