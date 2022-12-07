@@ -5,8 +5,9 @@
         <div class="main-rooms">
             <h3><a href="{% url 'room' room.id %}">{{ room.name }}</a></h3>
             <small>{{room.topic.name}}</small>
-            <small>@{{room.host.username}}</small>
-            
+            <a id="main-host" href="{% url 'profile' room.host.id %}">
+                <small>@{{room.host.username}}</small>
+            </a>
             {% if request.user == room.host %}
             <a class="main-delete" href="{% url 'update-room' room.id %}">Edit</a>
             <a class="main-delete" href="{% url 'delete-room' room.id %}">Delete</a>

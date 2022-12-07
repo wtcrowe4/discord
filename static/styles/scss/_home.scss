@@ -72,6 +72,20 @@
             .main-rooms {
                 padding: 20px;
 
+                a {
+                    color: lightblue;
+                    &:hover {
+                        scale: 1.1;
+                        text-shadow: 1px 1px 5px white;
+                    }
+                }
+
+                #main-host {
+                    small {
+                        color: lightblue;
+                    }
+                }
+
                 .main-delete {
                     float: right;
                     font-size: .8rem;

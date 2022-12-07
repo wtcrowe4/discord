@@ -136,6 +136,16 @@
 .home-container .main .main-rooms-container .main-rooms {
   padding: 20px;
 }
+.home-container .main .main-rooms-container .main-rooms a {
+  color: lightblue;
+}
+.home-container .main .main-rooms-container .main-rooms a:hover {
+  scale: 1.1;
+  text-shadow: 1px 1px 5px white;
+}
+.home-container .main .main-rooms-container .main-rooms #main-host small {
+  color: lightblue;
+}
 .home-container .main .main-rooms-container .main-rooms .main-delete {
   float: right;
   font-size: 0.8rem;
