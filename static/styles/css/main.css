@@ -82,6 +82,12 @@
   margin-top: 40px;
   box-shadow: 0px 0px 10px 0px lightblue;
 }
+.home-container .topics .topic-links {
+  padding: 5px;
+}
+.home-container .topics .topic-links span {
+  padding-left: 5px;
+}
 .home-container .topics #topic-header {
   align-items: flex-start;
   font-size: 2rem;
@@ -100,7 +106,8 @@
 .home-container .topics #topic-activity-container {
   border-radius: 5px;
   border: white;
-  text-align: center;
+  width: 90%;
+  text-align: left;
 }
 .home-container .topics #topic-activity-info {
   text-decoration: underline;

@@ -2,14 +2,12 @@
 
 {% block topics %}
 <h3 id="topic-header">Topics</h3>
-<div class="topic-links">
-    <a href="{% url 'home' %}">All   <span>{{topics.count}}</span></a>
-</div>
-{% for topic in topics %}
-    <div>
-        <a href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }} <span>{{topic.room_set.all.count}}</span></a>
-    </div>
-{% endfor %}
+
+    <a class="topic-links" href="{% url 'home' %}">All     <span>{{topics.count}}</span></a>
+    {% for topic in topics %}
+        <a class="topic-links" href="{% url 'home' %}?q={{topic.name}}">{{ topic.name }} <span>{{topic.room_set.all.count}}</span></a>
+    {% endfor %}
+
 <h4 id="topic-activity-header">Topic Activity</h4>
 {% for topic_message in topic_messages %}
     <div id="topic-activity-container">

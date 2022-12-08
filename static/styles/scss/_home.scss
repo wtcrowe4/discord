@@ -20,7 +20,13 @@
     
     .topics {
         @include section_container;
-
+        
+        .topic-links {
+            padding: 5px;
+            span {
+                padding-left: 5px;
+            }
+        }
         #topic-header {
             align-items: flex-start;
             font-size: 2rem;
@@ -40,7 +46,8 @@
         #topic-activity-container {
             border-radius: 5px;
             border:  white;
-            text-align: center;    
+            width: 90%;
+            text-align: left;   
         
         }
 
