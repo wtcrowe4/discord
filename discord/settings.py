@@ -27,10 +27,11 @@ load_dotenv()
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['django-discord-env.eba-byddpauz.us-west-2.elasticbeanstalk.com',
-                 'localhost', '']
+ALLOWED_HOSTS = ['localhost',
+                 'http://127.0.0.1:8000'
+                 'django-discord-env.eba-ksyu2kky.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
