@@ -78,3 +78,25 @@
        
     }
 }
+
+//Mobile view
+@media screen and (max-width: 768px) {
+    #nav-logo {
+        height: 30px;
+        width: 40px;
+       margin-left: 0;
+    }
+
+    #profile-image {
+        height: 30px;
+        width: 30px;
+    }
+
+    .navbar-container {
+        height: 50px;
+        
+        form {
+            display: none;
+        }
+    }
+}

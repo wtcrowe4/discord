@@ -63,3 +63,24 @@ footer {
         font-size: 1.1rem;
     }
  }
+
+
+//  Mobile View
+ @media screen and (max-width: 768px) {
+    .room-container {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        height: 30px;
+        justify-content: center;
+        .social-links {
+            font-size: 1rem;
+        }
+        p {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+    }
+    
+ }
