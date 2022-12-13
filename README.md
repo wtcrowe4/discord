@@ -28,7 +28,7 @@ You can now access the application on your local machine at localhost:8000.
 ### Technologies Used
 * Python
 * Django
-* EJS
+* Django Templates
 * HTML
 * SCSS
 * SQLite

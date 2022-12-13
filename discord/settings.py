@@ -29,9 +29,7 @@ SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost',
-                 'http://127.0.0.1:8000'
-                 'django-discord-env.eba-ksyu2kky.us-west-2.elasticbeanstalk.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,7 +75,16 @@ TEMPLATES = [
 ]
 
 
-WSGI_APPLICATION = 'discord.wsgi.application'
+WSGI_APPLICATION = 'discord.wsgi.application' 
+
+# Possible solution for django.config
+# option_settings:
+#   aws:elasticbeanstalk:application:environment:
+#     DJANGO_SETTINGS_MODULE: discord.settings
+#   aws:elasticbeanstalk:container:python:
+#     WSGIPath: discord.wsgi:application
+#   aws:elasticbeanstalk:environment:proxy:staticfiles:
+#     /static: static  
 
 
 # Database
