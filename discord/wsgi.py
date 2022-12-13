@@ -8,9 +8,12 @@ https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/
 """
 
 import os
+#import sys
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'discord/settings.py')
+#sys.path.insert(0, '/opt/python/current/discord')
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'discord.settings')
 
 application = get_wsgi_application()
