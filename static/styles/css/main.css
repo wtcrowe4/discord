@@ -130,6 +130,9 @@
   text-decoration: underline;
   padding-top: 6px;
 }
+.home-container .topics #topic-activity-info a small {
+  color: lightblue;
+}
 .home-container .topics #topic-activity-message {
   font-size: 1.1rem;
 }
@@ -567,6 +570,12 @@ h1 {
   padding-top: 20px;
   text-decoration: underline;
   text-shadow: 0px 0px 10px lightblue;
+}
+
+h5 {
+  text-align: center;
+  padding: 5px;
+  font-size: 1.2rem;
 }
 
 .profile-container {

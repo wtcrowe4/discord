@@ -54,6 +54,9 @@
         #topic-activity-info {
             text-decoration: underline;
             padding-top: 6px;
+            a small {
+                color: lightblue;
+            }
         }
 
         #topic-activity-message {
@@ -68,6 +71,7 @@
             font-size: 1rem;
             margin-bottom: 10px;
         }
+        
         a {
             font-size: 1.4rem;
         }

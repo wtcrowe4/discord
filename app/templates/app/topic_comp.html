@@ -12,7 +12,9 @@
 {% for topic_message in topic_messages %}
     <div id="topic-activity-container">
         <div id="topic-activity-info">
-            <small>@{{ topic_message.user.username }}</small>
+            <a href={% url 'profile' topic_message.user.id %}>
+                <small>@{{ topic_message.user.username }}</small>
+            </a>
             <small>{{ topic_message.created|timesince }}</small>
         </div>
         <div id="topic-activity-message">
