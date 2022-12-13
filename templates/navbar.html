@@ -13,7 +13,7 @@
     {% if request.user.is_authenticated %}
     
         <p>
-            Hey, <a id="user-link" href="{% url 'profile' user.id %}">{{ user.username }}
+            Hey, <a id="user-link" href="{% url 'profile' request.user.id %}">{{ request.user.username }}
                 <img id="profile-image" src="{% static 'images/gen-user.webp' %}" alt="User Image" />
             </a>
             
