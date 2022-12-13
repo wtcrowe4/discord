@@ -7,12 +7,12 @@ This is a simple version of Discord, a chat application that allows users to cre
 To get started, you will need to create an account. Once you have created an account, you will be able to create a room and invite other users to join. You will also be able to join other rooms that have been created by other users.
 
 ### Clone
+---
 To clone this repository, you will need to have Git installed on your machine. Once you have Git installed, you can run the following command in your terminal:
 
 * git clone https://github.com/wtcrowe4/discord
 ---
 Then cd into the discord folder and run the following command to create a virtual environment:
-
 * pip install virtualenv
 * virtualenv *env-name*
 * source *env-name*/bin/activate
