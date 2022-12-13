@@ -9,7 +9,7 @@ To get started, you will need to create an account. Once you have created an acc
 ### Clone
 To clone this repository, you will need to have Git installed on your machine. Once you have Git installed, you can run the following command in your terminal:
 ---
-*git clone https://github.com/wtcrowe4/discord
+* git clone https://github.com/wtcrowe4/discord
 ---
 Then cd into the discord folder and run the following command to create a virtual environment:
 ---
