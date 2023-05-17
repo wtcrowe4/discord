@@ -15,7 +15,7 @@ To clone this repository, you will need to have Git installed on your machine. O
 Then cd into the discord folder and run the following command to create a virtual environment:
 * pip install virtualenv
 * virtualenv *env-name*
-* source *env-name*/bin/activate
+* source *env-name*/bin/activate or *env-name*/Scripts/activate
 ---
 Then install the requirements:
 * pip install -r requirements.txt
